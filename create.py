@@ -38,10 +38,10 @@ def create_gateway():
 
 
 if __name__ == '__main__':
-
-    logger_info.info('Creating an internet gateway...')
-    logger_info.info(f'Please wait ......  \n We are creating your internet gateway...\U0001F570')
-    time.sleep(5)    
+    for i in range(3):
+        logger_info.info('Creating an internet gateway...')
+        logger_info.info(f'Please wait ......  \n We are creating your internet gateway...\U0001F570')
+        time.sleep(3)    
     internet_gateway = create_gateway()
-    
+
     logger_info.info(f'\nHurry, Your Internet gateway has been created with: {json.dumps(internet_gateway, indent=4)}')
